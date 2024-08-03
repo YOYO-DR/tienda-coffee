@@ -413,7 +413,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       mensaje += `Total pedido: $${totalPedido}\n`;
       mensaje = encodeURIComponent(mensaje);
-      let url_whatsapp = `https://wa.me/573206081583?text=${mensaje}`;
+      let url_whatsapp = `https://wa.me/573148743538?text=${mensaje}`;
       window.open(url_whatsapp, "_blank");
     }
   });
