@@ -253,7 +253,7 @@ document.addEventListener("DOMContentLoaded", function () {
                       <button type="button" class="btn-des minus">
                       <img
                         class="icono-flecha"
-                        src="/img/menos.png"
+                        src="./img/menos.png"
                         alt=""
                       />
                     </button>
@@ -261,7 +261,7 @@ document.addEventListener("DOMContentLoaded", function () {
                       <button type="button" class="btn-des plus">
                       <img
                         class="icono-flecha"
-                        src="/img/agregar.png"
+                        src="./img/agregar.png"
                         alt=""
                       />
                     </button>
