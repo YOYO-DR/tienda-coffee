@@ -30,7 +30,9 @@ function carritoMensaje(a = null) {
       icon: "error",
       title: "Carrito vacio",
     });
-  } else {
+  }
+  
+  else {
     Toast.fire({
       icon: "success",
       title: "Carrito actualizado",
@@ -327,6 +329,7 @@ document.addEventListener("DOMContentLoaded", function () {
             parseInt(precio.textContent) / parseInt(cantidad.textContent);
           cantidad.innerHTML = parseInt(cantidad.innerHTML) + 1;
           precio.innerHTML = parseInt(cantidad.innerHTML) * precioUnitario;
+          
         });
       });
       botonesMinus.forEach(function (boton) {
@@ -393,13 +396,12 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
     const produtosEnCarrito = document.querySelectorAll(".item-producto");
-    if (produtosEnCarrito.length === 0) {
+    if (produtosEnCarrito.length === 0){
       carritoMensaje("sin");
     } else {
       mensaje += `Productos:\n`;
-      let mensaje = "Productos:\n";
       let totalPedido = 0;
-      productosEnCarrito.forEach((producto) => {
+      produtosEnCarrito.forEach((producto) => {
         const titulo = producto.querySelector(".fs-6").textContent;
         const cantidad = producto.querySelector("#cantidad").textContent;
         const precio = producto.querySelector("#precio").textContent;
@@ -407,12 +409,12 @@ document.addEventListener("DOMContentLoaded", function () {
         totalPedido += parseInt(precio);
       });
       if (valores["notapedido"].trim() !== "") {
-        mensaje += `Nota usuario: ${valores["notapedido"]}\n`;
+        mensaje += `Nota usuario: ${valores["notapedido"]}`;
       }
       mensaje += `Total pedido: $${totalPedido}\n`;
       mensaje = encodeURIComponent(mensaje);
-      const url = `https://wa.me/573148743538?text=${mensaje}`;
-      window.open(url, "_blank");
+      let url_whatsapp = `https://wa.me/573206081583?text=${mensaje}`;
+      window.open(url_whatsapp, "_blank");
     }
   });
 });
